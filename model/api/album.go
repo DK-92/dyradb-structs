@@ -1,7 +1,5 @@
 package api
 
-import "strconv"
-
 // Album
 // Describes an album.
 type Album struct {
@@ -54,12 +52,4 @@ func (a *Album) SourceFriendly() string {
 	}
 
 	return "Unknown"
-}
-
-func (a *Album) LabelCodeString() string {
-	if a.LabelCode == 0 {
-		return "N/A"
-	}
-
-	return strconv.Itoa(a.LabelCode)
 }
