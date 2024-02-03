@@ -16,6 +16,6 @@ type Album struct {
 	Label         string `form:"label" binding:"omitempty,min=1,max=64"`
 	Country       string `form:"country" binding:"omitempty,len=2"`
 	Comment       string `form:"comment" binding:"omitempty,min=1,max=1024"`
-	CatalogNumber string `form:"catalogNumber" binding:"omitempty,min=1,max=16"`
-	LabelCode     int    `form:"labelCode" binding:"omitempty,min=4,max=5"`
+	CatalogNumber string `form:"catalog_number" binding:"omitempty,min=1,max=16"`
+	LabelCode     int    `form:"label_code" binding:"omitempty,min=4,max=5"`
 }
