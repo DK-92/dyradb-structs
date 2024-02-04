@@ -16,12 +16,12 @@ type Album struct {
 	DRLog string `json:"drLog,omitempty" binding:"required,drlog"`
 	Art   string `json:"art,omitempty" binding:"required,encodedimage"`
 
-	LabelCode    int  `json:"labelCode" binding:"omitempty,min=4,max=5"`
-	ReleaseYear  int  `json:"releaseYear" binding:"required,numeric,min=1000,max=3000"`
-	AverageDR    int8 `json:"averageDR"`
-	MinimumDR    int8 `json:"minimumDR"`
-	MaximumDR    int8 `json:"maximumDR"`
-	InCollection bool `json:"in_collection,omitempty"`
+	LabelCode    string `json:"labelCode" binding:"omitempty,min=4,max=5"`
+	ReleaseYear  int    `json:"releaseYear" binding:"required,numeric,min=1000,max=3000"`
+	AverageDR    int8   `json:"averageDR"`
+	MinimumDR    int8   `json:"minimumDR"`
+	MaximumDR    int8   `json:"maximumDR"`
+	InCollection bool   `json:"in_collection,omitempty"`
 
 	Tracks []*Track `json:"tracks,omitempty"`
 }
