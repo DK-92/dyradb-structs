@@ -15,6 +15,7 @@ func ConvertFormToAlbumAPI(form *form.Album) *api.Album {
 		Source:      form.Source,
 		Comment:     form.Comment,
 		ReleaseYear: form.ReleaseYear,
+		LabelCode:   form.LabelCode,
 		DRLog:       form.DRLog,
 		Art:         form.Art,
 	}
