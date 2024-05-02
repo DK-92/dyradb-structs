@@ -13,7 +13,7 @@ type Album struct {
 	CatalogNumber string `json:"catalogNumber" binding:"omitempty,min=1,max=16"`
 	Comment       string `json:"comment,omitempty" binding:"omitempty,min=1,max=1024"`
 
-	DRLog string `json:"drLog,omitempty" binding:"required,drlog"`
+	DRLog string `json:"drLog,omitempty" binding:"required"`
 	Art   string `json:"art,omitempty" binding:"required,encodedimage"`
 
 	LabelCode    string `json:"labelCode" binding:"omitempty,min=4,max=5"`
