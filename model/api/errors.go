@@ -1,6 +1,9 @@
 package api
 
-import "github.com/go-playground/validator/v10"
+import (
+	"github.com/go-playground/validator/v10"
+	"strings"
+)
 
 type returnMessage struct {
 	Information []string        `json:"information,omitempty"`
@@ -18,7 +21,20 @@ func DetailedErrorMessage(e validator.ValidationErrors) *returnMessage {
 	for _, err := range e {
 		message := errorMessage{
 			Field: err.Field(),
-			Type:  err.Tag(),
+			Type:  strings.TrimRight(err.Tag()+" "+err.Param(), " "),
+		}
+		eArr = append(eArr, &message)
+	}
+
+	return &returnMessage{Errors: eArr}
+}
+
+func DRLogErrorMessage(e []error) *returnMessage {
+	var eArr []*errorMessage
+	for _, err := range e {
+		message := errorMessage{
+			Field: "DRLog",
+			Type:  err.Error(),
 		}
 		eArr = append(eArr, &message)
 	}
