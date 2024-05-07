@@ -10,8 +10,8 @@ type Album struct {
 
 	ReleaseYear int `form:"release_year" binding:"required,numeric,min=1000,max=3000"`
 
-	DRLog string `form:"dr_log" binding:"required"`
-	Art   string `form:"album_front" binding:"required"`
+	DRLog string
+	Art   string
 
 	Label         string `form:"label" binding:"omitempty,min=1,max=64"`
 	Country       string `form:"country" binding:"omitempty,len=2"`
