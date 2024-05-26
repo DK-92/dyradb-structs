@@ -10,7 +10,7 @@ type Album struct {
 	Label         string `json:"label,omitempty" binding:"omitempty,min=1,max=64"`
 	Country       string `json:"country,omitempty" binding:"omitempty,len=2"`
 	Source        string `json:"source" binding:"required,oneof=CDROM SHMCD SACD DVDA BLURAY DOWNLOAD"`
-	CatalogNumber string `json:"catalogNumber" binding:"omitempty,min=1,max=16"`
+	CatalogNumber string `json:"catalogNumber" binding:"omitempty,min=1,max=128"`
 	Comment       string `json:"comment,omitempty" binding:"omitempty,min=1,max=1024"`
 
 	DRLog string `json:"drLog,omitempty" binding:"required"`
