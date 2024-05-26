@@ -7,17 +7,18 @@ import (
 
 func ConvertFormToAlbumAPI(form *form.Album) *api.Album {
 	return &api.Album{
-		Barcode:     form.Barcode,
-		Artist:      form.Artist,
-		Album:       form.Album,
-		Label:       form.Label,
-		Country:     form.Country,
-		Source:      form.Source,
-		Comment:     form.Comment,
-		ReleaseYear: form.ReleaseYear,
-		LabelCode:   form.LabelCode,
-		DRLog:       form.DRLog,
-		Art:         form.Art,
+		Barcode:       form.Barcode,
+		Artist:        form.Artist,
+		Album:         form.Album,
+		Label:         form.Label,
+		Country:       form.Country,
+		Source:        form.Source,
+		Comment:       form.Comment,
+		ReleaseYear:   form.ReleaseYear,
+		LabelCode:     form.LabelCode,
+		CatalogNumber: form.CatalogNumber,
+		DRLog:         form.DRLog,
+		Art:           form.Art,
 	}
 }
 
