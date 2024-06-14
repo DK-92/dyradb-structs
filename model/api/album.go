@@ -5,8 +5,8 @@ package api
 type Album struct {
 	ID            string `json:"id,omitempty"`
 	Barcode       string `json:"barcode" binding:"required,min=11,max=13,numeric"`
-	Artist        string `json:"artist" binding:"required,min=1,max=64"`
-	Album         string `json:"album" binding:"required,min=1,max=64"`
+	Artist        string `json:"artist" binding:"required,min=1,max=90"`
+	Album         string `json:"album" binding:"required,min=1,max=128"`
 	Label         string `json:"label,omitempty" binding:"omitempty,min=1,max=64"`
 	Country       string `json:"country,omitempty" binding:"omitempty,len=2"`
 	Source        string `json:"source" binding:"required,oneof=CDROM SHMCD SACD DVDA BLURAY DOWNLOAD"`

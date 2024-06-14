@@ -3,8 +3,8 @@ package form
 // Album
 // Validates the add album form.
 type Album struct {
-	Artist  string `form:"artist" binding:"required,min=1,max=64"`
-	Album   string `form:"album" binding:"required,min=1,max=64"`
+	Artist  string `form:"artist" binding:"required,min=1,max=90"`
+	Album   string `form:"album" binding:"required,min=1,max=128"`
 	Barcode string `form:"barcode" binding:"required" binding:"required,min=11,max=13,numeric"`
 	Source  string `form:"source" binding:"required,oneof=CDROM SHMCD SACD DVDA BLURAY DOWNLOAD"`
 
