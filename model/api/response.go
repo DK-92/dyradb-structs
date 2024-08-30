@@ -1,8 +1,11 @@
 package api
 
+import "net/http"
+
 // Response
 // API responses fit in this struct.
 type Response struct {
+	Headers     *http.Header    `json:"-"` // This field should not appear
 	Information []string        `json:"information,omitempty"`
 	Errors      []*errorMessage `json:"errors,omitempty"`
 }
