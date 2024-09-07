@@ -19,5 +19,9 @@ func (r *Response) IsNotValid() bool {
 }
 
 func (r *Response) XLogIDHeader() string {
+	if r.Headers == nil {
+		return ""
+	}
+
 	return r.Headers.Get(xLogIdHeader)
 }
