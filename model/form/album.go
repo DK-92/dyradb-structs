@@ -18,4 +18,5 @@ type Album struct {
 	Comment       string `form:"comment" binding:"omitempty,min=1,max=1024"`
 	CatalogNumber string `form:"catalog_number" binding:"omitempty,min=1,max=128"`
 	LabelCode     string `form:"label_code" binding:"omitempty,min=4,max=5,numeric"`
+	DiscogsURL    string `form:"discogs_url" binding:"omitempty,min=1,max=256"`
 }
