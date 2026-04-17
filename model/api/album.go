@@ -12,7 +12,7 @@ type Album struct {
 	Source        string `json:"source" binding:"required,oneof=CDROM SHMCD SACD DVDA BLURAY DOWNLOAD"`
 	CatalogNumber string `json:"catalogNumber" binding:"omitempty,min=1,max=128"`
 	Comment       string `json:"comment,omitempty" binding:"omitempty,min=1,max=1024"`
-	DiscogsURL    string `json:"discogsUrl" binding:"omitempty,min=1,max=256"`
+	DiscogsURL    string `json:"discogsUrl" binding:"omitempty,min=1,max=256,encodedimage"`
 
 	DRLog string `json:"drLog,omitempty" binding:"required"`
 	Art   string `json:"art,omitempty" binding:"required,encodedimage"`
