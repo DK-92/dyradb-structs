@@ -18,6 +18,7 @@ func ConvertFormToAlbumAPI(form *form.Album) *api.Album {
 		LabelCode:     form.LabelCode,
 		CatalogNumber: form.CatalogNumber,
 		DiscogsURL:    form.DiscogsURL,
+		BandcampURL:   form.BandcampURL,
 		DRLog:         form.DRLog,
 		Art:           form.Art,
 	}
